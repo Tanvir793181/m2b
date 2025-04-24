@@ -24,6 +24,10 @@ app.use('/api/madrid/players', require('./routes/madrid/players'));
 app.use('/api/madrid/updates', require('./routes/madrid/updates'));
 
 app.use('/api/news', require('./routes/news'));
+app.get('/', (req, res) => {
+  res.send('Serverless works!');
+});
+
 
 // Error handling
 app.use((err, req, res, next) => {
